@@ -12,12 +12,12 @@
 
 # import nixpkgs with overlays
 , pkgs ? import nixpkgsSrc nixpkgsArgs
-}: pkgs.haskell-nix.project {
+}: pkgs.haskell-nix.cabalProject' {
   # 'cleanGit' cleans a source directory based on the files known by git
   src = pkgs.haskell-nix.haskellLib.cleanGit {
     name = "hello-world";
     src = ./.;
   };
   # Specify the GHC version to use.
-  compiler-nix-name = "ghc8102"; # Not required for `stack.yaml` based projects.
+  compiler-nix-name = "ghc884"; # Not required for `stack.yaml` based projects.
 }
