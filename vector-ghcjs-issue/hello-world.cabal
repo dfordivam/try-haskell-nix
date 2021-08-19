@@ -9,6 +9,6 @@ extra-source-files:  CHANGELOG.md
 executable hello-world
   main-is:             Main.hs
   other-modules:       MyLib
-  build-depends:       base, hello-world
+  build-depends:       base
                        , vector
   default-language:    Haskell2010
